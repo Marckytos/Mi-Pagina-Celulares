@@ -1,0 +1,109 @@
+[
+  {
+    "id": "xiaomi-15t-pro",
+    "brand": "Xiaomi",
+    "model": "15T Pro",
+    "series": "15T",
+    "releaseDate": "2025-09-25",
+    "variants": [
+      {
+        "region": "Global",
+        "sku": "15T-PRO-12-256",
+        "ram": "12 GB",
+        "storage": "256 GB",
+        "priceUSD": 860,
+        "bands": ["GSM","WCDMA","LTE","5G"],
+        "os": "Xiaomi HyperOS 2 (Android 15)"
+      },
+      {
+        "region": "China",
+        "sku": "15T-PRO-12-512",
+        "ram": "12 GB",
+        "storage": "512 GB",
+        "priceUSD": 970,
+        "bands": ["GSM","WCDMA","LTE","5G"],
+        "os": "Xiaomi HyperOS 3 (Android 16)"
+      }
+    ],
+    "specs": {
+      "display": "6.83\" AMOLED • LIPO 144Hz • 2772x1280 • Gorilla Glass 7i • 3200nits • HDR10+ Dolby Vision ",
+      "cpu": "Mediatek Dimensity 9400+ 3nm",
+      "gpu": "Immortalis-G925 MC12",
+      "battery": "5500mAh (typ) Xiaomi surge Battery",
+      "charging": "90W wired HyperCharge, 50W wireless",
+      "rearCamera": "50 MP (wide) Light Fusion 900 Leica 23mm main camera + 12 MP (ultrawide) + 50 MP (tele) Leica 115mm super telephoto camera",
+      "frontCamera": "32 MP",
+      "dimensions": "162.7 x 77.9 x 7.96 mm",
+      "weight": "210 g"
+    },
+    "images": ["/Recursos/Imagenes/Xiaomi-15T-series.webp"],
+    "officialLink": "https://www.mi.com/global/product/xiaomi-15t-pro/specs",
+    "sources": ["https://www.gsmarena.com/xiaomi_15t_pro_5g-14178.php"]
+  },
+  {
+    "id": "iphone-17-pro-max",
+    "brand": "Apple",
+    "model": "iPhone 17 Pro Max",
+    "series": "iPhone 17",
+    "releaseDate": "2025-09-19",
+    "variants": [
+      {
+        "region": "Global",
+        "sku": "A3526",
+        "ram": "12 GB",
+        "storage": "256 GB",
+        "priceUSD": 1199,
+        "os": "iOS 26"
+      }
+    ],
+    "specs": {
+      "display": "6.9\" LTPO Super Retina XDR OLED • 120Hz • HDR10 • Dolby Vision • 1000nits (typ) • 1600nits (HBM) • 3000nits (peak) • 1320x2868 ",
+      "cpu": "Apple A19 Pro",
+      "gpu": "Apple GPU",
+      "battery": "4832mAh (Nano SIM model), 5088mAh (eSIM only model)",
+      "charging": "25W wired / wireless",
+      "rearCamera": "48 MP (wide) main camera 24mm + 48 MP (periscope telephoto) 100mm  + 48 MP (ultra wide) 13mm",
+      "frontCamera": "18 MP",
+      "dimensions": "163.4 x 78 x 8.8 mm",
+      "weight": "233 g"
+    },
+    "images": ["/Recursos/Imagenes/iPhone_17-series.webp"],
+    "officialLink": "https://www.apple.com/iphone-17-pro/",
+    "sources": ["https://m.gsmarena.com/apple_iphone_17_pro_max-13964.php"]
+  },
+  {
+    "id": "Google-Pixel-10-Pro-XL",
+    "brand": "Google",
+    "model": "Pixel 10 Pro",
+    "series": "Pixel 10",
+    "releaseDate": "2025-08-28",
+    "variants":[
+        {
+            "region": "Global",
+            "sku": "Pixel-10-PRO-16-256",
+            "ram":"16 GB",
+            "storage":"256 GB",
+            "priceUSD":1200,
+            "OS": "Android 16"
+        }
+    ],
+    "specs":{
+        "display":"6.8\" LTPO OLED 120hz • HDR10+ • 2200 nits (HBM) • 3300 nits (peak) • Gorilla Glass Victus 2 • 1344x2992",
+        "cpu": "Google Tensor G5 3nm",
+        "gpu": "PowerVR DXT-48-1536",
+        "battery": "5200mAh Li-Ion",
+        "charging": "45W wired, 25W wireless",
+        "rearCamera": "50 MP (wide) main camera 25mm + 48 MP (periscope telephoto) 113mm 5x optical zoom + 48 MP (ultrawide) 123°",
+        "frontCamera": "42 MP (ultrawide) 17mm",
+        "dimensions": "162.8 x 76.6 x 8.5mm",
+        "weight": "232 g"
+    },
+    "images":["Recursos/Imagenes/seobild_pixel10_series.webp"],
+    "officialLink":"https://store.google.com/product/pixel_10_pro?hl=es-419&pli=1",
+    "sources":["https://m.gsmarena.com/google_pixel-10_pro_xl_5g-13988.php"]
+    
+
+  }
+
+
+]

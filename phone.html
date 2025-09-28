@@ -1,0 +1,50 @@
+<!-- phone.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ficha - Celulares</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header> ... </header>
+  <main id="phone-detail" style="max-width:1000px;margin:auto;padding:30px;">
+    <p>Cargando...</p>
+  </main>
+  <script>
+    function getParam(name) {
+      return new URLSearchParams(location.search).get(name);
+    }
+    const id = getParam('id');
+    fetch('/data/phones.json')
+      .then(r => r.json())
+      .then(list => {
+        const phone = list.find(p => p.id === id);
+        const container = document.getElementById('phone-detail');
+        if (!phone) { container.innerHTML = '<p>Modelo no encontrado.</p>'; return; }
+        container.innerHTML = `
+          <article class="detail">
+            <img src="${phone.images[0] || '/Recursos/Imagenes/placeholder.png'}" alt="${phone.model}" style="max-width:320px;">
+            <h1>${phone.brand} ${phone.model}</h1>
+            <p><strong>Serie:</strong> ${phone.series} • <strong>Fecha:</strong> ${phone.releaseDate}</p>
+            <h3>Especificaciones</h3>
+            <ul>
+              <li><strong>Pantalla:</strong> ${phone.specs.display}</li>
+              <li><strong>Procesador:</strong> ${phone.specs.cpu}</li>
+              <li><strong>Batería:</strong> ${phone.specs.battery} (${phone.specs.charging || ''})</li>
+              <li><strong>Cámaras:</strong> ${phone.specs.rearCamera} / ${phone.specs.frontCamera}</li>
+              <li><strong>Dimensiones:</strong> ${phone.specs.dimensions} • ${phone.specs.weight}</li>
+            </ul>
+            <h3>Variantes</h3>
+            <ul>
+              ${phone.variants.map(v => `<li>${v.region} — ${v.ram} / ${v.storage} — SKU: ${v.sku} — Precio aprox: $${v.priceUSD || 'N/A'}</li>`).join('')}
+            </ul>
+            <p><a href="${phone.officialLink}" target="_blank">Link oficial</a></p>
+          </article>
+        `;
+      })
+      .catch(err => { document.getElementById('phone-detail').innerHTML = '<p>Error cargando datos.</p>'; console.error(err); });
+  </script>
+</body>
+</html>
