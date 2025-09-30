@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
   fetch('/data/phones.json')
     .then(res => res.json())
-    .then(phones => renderPhones(phones))
+    .then(data => renderSeries(data.series))
     .catch(err => {
       console.error('Error cargando phones.json', err);
-      const c = document.getElementById('lanzamientos-list');
+      const c = document.getElementById('series-list');
       if (c) c.innerHTML = '<p>No se pudieron cargar los lanzamientos.</p>';
     });
 
-  function renderPhones(phones) {
-    const container = document.getElementById('lanzamientos-list');
+  function renderSeries(series) {
+    const container = document.getElementById('series-list');
     if (!container) return;
-    container.innerHTML = phones.map(phoneCardHTML).join('');
+    container.innerHTML = series.map(serieCardHTML).join('');
   }
 
-  function phoneCardHTML(phone) {
-    const img = phone.images && phone.images[0] ? phone.images[0] : '/Recursos/Imagenes/placeholder.png';
+  function serieCardHTML(serie) {
+    const img = serie.image || '/Recursos/Imagenes/placeholder.png';
     return `
       <article class="card">
-        <img src="${img}" alt="${phone.brand} ${phone.model}" class="card-img">
+        <img src="${img}" alt="${escapeHtml(serie.name)}" class="card-img">
         <div class="card-body">
-          <h3>${escapeHtml(phone.brand)} ${escapeHtml(phone.model)}</h3>
-          <p class="release">Lanzamiento: ${escapeHtml(phone.releaseDate)}</p>
-          <p class="small">${escapeHtml(phone.specs.display)} • ${escapeHtml(phone.specs.cpu)}</p>
-          <a class="btn" href="phone.html?id=${phone.id}">Ver ficha</a>
+          <h3>${escapeHtml(serie.name)}</h3>
+          <p class="release">Lanzamiento: ${escapeHtml(serie.releaseDate)}</p>
+          <p class="small">Modelos incluidos: ${serie.models.length}</p>
+          <a class="btn" href="series.html?id=${serie.id}">Ver serie completa</a>
         </div>
       </article>
     `;
