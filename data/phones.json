@@ -127,7 +127,7 @@
 
         {
           "id": "xiaomi-17 pro",
-          "model": "Xiaomi 17 pro",
+          "model": "17 pro",
           "variants": [
             {
               "region": "China",
@@ -159,7 +159,7 @@
 
         {
           "id": "xiaomi-17",
-          "model": "Xiaomi 17",
+          "model": "17",
           "variants": [
             {
               "region": "China",
